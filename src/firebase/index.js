@@ -38,12 +38,12 @@ const db = getFirestore();
 const colRef = collection(db, "books");
 
 /* 
-   BLOCK: Query : to get filtered data. In this case books if author name is abrar
+    Query : to get filtered data. In this case books if author name is abrar
 */
 const q = query(colRef, where("author", "==", "abrar"));
 
 /* 
-   BLOCK: Books Collections Order Refs : to get assenting or descending ordered data.
+    Books Collections Order Refs : to get assenting or descending ordered data.
 */
 const booksCollectionsOrderRefs = query(colRef, orderBy("createdAt", "desc"));
 
